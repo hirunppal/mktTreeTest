@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+    .form-controll{
+      display:block;
+      width: 600px;
+      margin: 40px auto ;
+    }
+    form >div{ display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      row-gap:5px;
+      column-gap:2px;
+    }
+    input,select {
+      grid-column: span 2 / span 2;
+      padding: 6px;
+    }
+    
+    label{
+      display: flex;
+      align-items: center;
+      text-align: left;
+      padding-left: 48px;
+    }
+    
+    .genderinput{
+       grid-column: span  2/ span 2;
+       display: flex;
+      }
+      .butSubmit{
+        display: block;
+        /* grid-column-start: 2; */
+        grid-column: span  3/ span 3;
+        /* width: 100%; */
+}
+      .butSubmit > button{
+        width :20%;
+        padding: 8px;
+        border-radius: 8px;
+
+      }
+  </style>
+</head>
+<body>
+  <form class="form-controll"  >
+
+    <div>
+
+    <label for="name" >ชื่อ นามสกุล  </label> <input id="name"></input>
+    <label for="email" type="email">อีเมล  </label> <input id="name"></input>
+    <label for="phoneNum" type="number" >เบอร์โทร  </label> <input id="name"></input>
+    <label for="salary" type="number">เงินเดือน  </label>
+    <select name="cars" id="cars">
+      <option value="volvo">0 - 15,000 บาท</option>
+      <option value="saab">15,001 - 30,000 บาท</option>
+      <option value="mercedes">30,000 บาท ขึ้นไป</option>
+    </select>
+    <label for="education" >การศึกษา  </label>
+    <select name="cars" id="cars">
+      <option value="volvo"> ป. ตรี</option>
+      <option value="saab"> ป. โท</option>
+      <option value="mercedes">  ป. เอก</option>
+    </select>
+    <label for="gender" >เพศ  </label> 
+    <div class="genderinput">
+      <input type="radio" name="gender" value="male">ชาย</input> <input type="radio" name="gender" value="c">หญิง</input>
+    </div>
+    <label for="age" >อายุ  </label> <input id="age"  type="number"></input>
+    
+    <div class="butSubmit">
+       <button
+       type=" submit"">บันทึก</button>
+      </div>
+
+  </div>
+  </form>
+  
+  
+</body>
+</html>
